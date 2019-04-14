@@ -6,8 +6,8 @@ import com.codingapi.tx.framework.utils.SerializerUtils;
 import com.codingapi.tx.model.TransactionInvocation;
 import com.example.demo.entity.Test;
 import com.example.demo.service.DemoService;
-import com.lorne.core.framework.utils.encode.Base64Utils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.Base64Utils;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -42,7 +42,7 @@ public class DemoController {
         System.out.println("通知地址..." + jsonStr);
         String data = (String) JSONObject.parseObject(jsonStr).get("json");
         data = (String) JSONObject.parseObject(data).get("data");
-        byte[] serializers =  Base64Utils.decode(data);
+        byte[] serializers =  Base64Utils.decodeFromString(data);
         TransactionInvocation transactionInvocation = SerializerUtils.parserTransactionInvocation(serializers);
 
         System.out.println(transactionInvocation.getMethodStr());
