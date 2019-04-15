@@ -13,7 +13,6 @@ import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.cloud.client.serviceregistry.Registration;
 import org.springframework.stereotype.Service;
-import org.springframework.util.CollectionUtils;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
@@ -56,9 +55,9 @@ public class MicroServiceImpl implements MicroService {
     public TxState getState() {
         TxState state = new TxState();
         String ipAddress = registration.getHost();
-        if(!isIp(ipAddress)){
-            ipAddress = "127.0.0.1";
-        }
+//        if(!isIp(ipAddress)){
+//            ipAddress = "127.0.0.1";
+//        }
         logger.info("ipAddress: {}, port: {}", ipAddress, Constants.socketPort);
         state.setIp(ipAddress);
         state.setPort(Constants.socketPort);
