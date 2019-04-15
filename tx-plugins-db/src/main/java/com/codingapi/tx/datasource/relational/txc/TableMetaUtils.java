@@ -1,7 +1,6 @@
 package com.codingapi.tx.datasource.relational.txc;
 
 import com.codingapi.tx.aop.bean.TxTransactionLocal;
-import com.lorne.core.framework.utils.config.ConfigUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.util.StringUtils;

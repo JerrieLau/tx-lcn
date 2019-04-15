@@ -8,7 +8,7 @@ import com.alibaba.druid.sql.dialect.mysql.parser.MySqlStatementParser;
 import com.codingapi.tx.datasource.relational.txc.TableMetaInfo;
 import com.codingapi.tx.datasource.relational.txc.TableMetaUtils;
 import com.codingapi.tx.datasource.relational.txc.TxcStatement;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
