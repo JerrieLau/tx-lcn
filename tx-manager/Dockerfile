@@ -1,7 +1,7 @@
 # Name:     xx-gateway
 # Time:     2019-04-02
 
-FROM adoptopenjdk/openjdk8:alpine-slim
+FROM adoptopenjdk/openjdk8:slim
 
 RUN ln -snf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo 'Asia/Shanghai' > /etc/timezone
 
