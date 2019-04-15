@@ -5,6 +5,8 @@ FROM adoptopenjdk/openjdk8:alpine-slim
 
 RUN ln -snf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo 'Asia/Shanghai' > /etc/timezone
 
+ENV LANG C.UTF-8
+
 MAINTAINER JerrieLau <jerrielau85@gmail.com>
 
 VOLUME /tmp
